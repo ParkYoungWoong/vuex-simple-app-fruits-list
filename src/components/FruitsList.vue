@@ -11,10 +11,12 @@
 
 <script>
   export default {
-    props: ['fruits']
+    computed: {
+      fruits() {
+        return this.$store.state.fruits
+      }
+    }
   }
 </script>
 
-<style>
-
-</style>
+<style></style>

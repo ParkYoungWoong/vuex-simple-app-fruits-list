@@ -2,8 +2,8 @@
   <div id="app">
     <h1 id="app-title">Fruits List</h1>
     <div id="fruits-table">
-      <fruits-list :fruits="fruits"></fruits-list>
-      <fruits-price :fruits="fruits"></fruits-price>
+      <fruits-list></fruits-list>
+      <fruits-price></fruits-price>
     </div>
   </div>
 </template>
@@ -16,14 +16,7 @@ export default {
   name: 'app',
   data () {
     return {
-      fruits: [
-        { name: 'Apple', price: 30 },
-        { name: 'Banana', price: 40 },
-        { name: 'Mango', price: 50 },
-        { name: 'Orange', price: 60 },
-        { name: 'Tomato', price: 70 },
-        { name: 'Pineapple', price: 80 }
-      ]
+
     }
   },
   components: {
