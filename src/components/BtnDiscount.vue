@@ -1,10 +1,16 @@
 <template>
-  <div class="btn">{{ btnName }}</div>
+  <div class="btn" @click="discountPrice">DISCOUNT PRICE</div>
 </template>
 
 <script>
   export default {
-    props: ['btnName']
+    methods: {
+      discountPrice() {
+        this.$store.commit('discountPrice', {
+          discountRate: 20
+        });
+      }
+    }
   }
 </script>
 

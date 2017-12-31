@@ -22,5 +22,12 @@ export const store = new Vuex.Store({
         }
       });
     }
+  },
+  mutations: {
+    discountPrice(state, payload) {
+      state.fruits.forEach(fruit => {
+         fruit.price *= (100 - payload.discountRate) / 100;
+      });
+    }
   }
 });

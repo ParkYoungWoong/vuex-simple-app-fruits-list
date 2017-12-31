@@ -5,14 +5,14 @@
       <fruits-list></fruits-list>
       <fruits-price></fruits-price>
     </div>
-    <btn-component :btnName="'Discount'"></btn-component>
+    <btn-discount></btn-discount>
   </div>
 </template>
 
 <script>
 import FruitsList from './components/FruitsList.vue';
 import FruitsPrice from './components/FruitsPrice.vue';
-import BtnComponent from './components/Btn.vue';
+import BtnDiscount from './components/BtnDiscount.vue';
 
 export default {
   name: 'app',
@@ -24,7 +24,7 @@ export default {
   components: {
     'fruits-list': FruitsList,
     'fruits-price': FruitsPrice,
-    'btn-component': BtnComponent
+    'btn-discount': BtnDiscount
   }
 }
 </script>
