@@ -13,5 +13,14 @@ export const store = new Vuex.Store({
       { name: 'Tomato', price: 70 },
       { name: 'Pineapple', price: 80 }
     ]
+  },
+  getters: {
+    upperCaseFruits: state => {
+      return state.fruits.map(fruit => {
+        return {
+          name: `- ${fruit.name.toUpperCase()}`
+        }
+      });
+    }
   }
 });

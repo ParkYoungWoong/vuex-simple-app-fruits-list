@@ -2,7 +2,7 @@
   <div id="fruits-list">
     <h1>Fruits Name</h1>
     <ul>
-      <li v-for="fruit in fruits">
+      <li v-for="fruit in upperCaseFruits">
         {{ fruit.name }}
       </li>
     </ul>
@@ -13,7 +13,10 @@
   export default {
     computed: {
       fruits() {
-        return this.$store.state.fruits
+        return this.$store.state.fruits;
+      },
+      upperCaseFruits() {
+        return this.$store.getters.upperCaseFruits;
       }
     }
   }

@@ -13,7 +13,7 @@
   export default {
     computed: {
       fruits() {
-        return this.$store.state.fruits
+        return this.$store.state.fruits;
       }
     }
   }
