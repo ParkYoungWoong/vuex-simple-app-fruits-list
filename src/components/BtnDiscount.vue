@@ -6,7 +6,7 @@
   export default {
     methods: {
       discountPrice() {
-        this.$store.commit('discountPrice', {
+        this.$store.dispatch('discountPrice', {
           discountRate: 20
         });
       }

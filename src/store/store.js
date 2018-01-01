@@ -29,5 +29,12 @@ export const store = new Vuex.Store({
          fruit.price *= (100 - payload.discountRate) / 100;
       });
     }
+  },
+  actions: {
+    discountPrice(context, payload) {
+      setTimeout(() => {
+        context.commit('discountPrice', payload);
+      }, 2000);
+    }
   }
 });
