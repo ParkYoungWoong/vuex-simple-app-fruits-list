@@ -1,5 +1,5 @@
 <template>
-  <div class="btn" @click="discountPrice(discountData)">DISCOUNT PRICE</div>
+  <div class="btn" @click="price(discountData)">DISCOUNT PRICE</div>
 </template>
 
 <script>
@@ -14,9 +14,9 @@
       }
     },
     methods: {
-      ...mapActions([
-        'discountPrice'
-      ])
+      ...mapActions({
+        price: 'discountPrice'
+      })
     }
   }
 </script>
