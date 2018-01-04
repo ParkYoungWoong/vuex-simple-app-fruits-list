@@ -10,11 +10,11 @@
 </template>
 
 <script>
+  import { mapState } from 'vuex';
+
   export default {
     computed: {
-      fruits() {
-        return this.$store.state.fruits;
-      }
+      ...mapState(['fruits'])
     }
   }
 </script>

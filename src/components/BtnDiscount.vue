@@ -1,15 +1,22 @@
 <template>
-  <div class="btn" @click="discountPrice">DISCOUNT PRICE</div>
+  <div class="btn" @click="discountPrice(discountData)">DISCOUNT PRICE</div>
 </template>
 
 <script>
+  import { mapActions } from 'vuex';
+
   export default {
-    methods: {
-      discountPrice() {
-        this.$store.dispatch('discountPrice', {
-          discountRate: 20
-        });
+    data() {
+      return {
+        discountData: {
+          rate: 20
+        }
       }
+    },
+    methods: {
+      ...mapActions([
+        'discountPrice'
+      ])
     }
   }
 </script>

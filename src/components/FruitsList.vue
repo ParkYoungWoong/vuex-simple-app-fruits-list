@@ -10,14 +10,16 @@
 </template>
 
 <script>
+  import { mapState, mapGetters } from 'vuex';
+
   export default {
     computed: {
-      fruits() {
-        return this.$store.state.fruits;
-      },
-      upperCaseFruits() {
-        return this.$store.getters.upperCaseFruits;
-      }
+      ...mapState([
+        'fruits'
+      ]),
+      ...mapGetters([
+        'upperCaseFruits'
+      ])
     }
   }
 </script>
